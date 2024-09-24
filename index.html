@@ -1,0 +1,145 @@
+git<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Comfortaa", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: linear-gradient(to right, rgba(246, 255, 248), rgba(234, 244, 244));
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.hero-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to left,#5b43c7,#80ffdb);
+
+}
+
+body.dark-mode .hero-header {
+    background: #1e1e1e;
+}
+
+header {
+    padding: 20px 50px 30px;
+    padding-left: 10px;
+    background-image: linear-gradient(rgb(0, 62, 121), rgb(93, 0, 147));
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    transition: background-color 0.3s;
+}
+
+body.dark-mode header {
+    background: #333;
+}
+.dark-mode-toggle{
+    display: inline;
+ 
+  margin-left: 700px;
+}
+
+.navlinks li a {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .navlinks li a {
+    color: #e0e0e0;
+}
+
+.hero-text h5,
+.hero-text h1,
+.hero-text p {
+    color: black;
+}
+
+body.dark-mode .hero-text h5,
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text p {
+    color: #ffffff;
+}
+
+/* Add more dark mode styles as needed */
+
+</style>
+<body >
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div  class="logo">
+                    <i style="background-color: white;"class="fa-solid fa-a"></i>
+                    <div class="logo-text">RAJU A</div>
+                </div>
+                <div class="dark-mode-toggle" id="darkModeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a class="fade-in" href="#">Home</a></li>
+                        <li><a class="fade-in" href="resumport.html">Resume</a></li>
+                        <li><a class="fade-in" href="#">Contact</a></li>
+                    </ul>
+ 
+                </nav>
+            </header>
+            
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="raju.png" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5 class="fade-in">Hi I'm <span class="input">Web Developer</span></h5>
+                    <h1 class="fade-in">Pushparaj A</h1>
+                    <p class="fade-in">To build responsive and visually appealing web applications that enhance user experience and meet client needs effectively. I am focused on mastering front-end and back-end technologies to create robust and secure web solutions</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="resumport.html" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script >
+        document.getElementById('darkModeToggle').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+});
+
+    </script>
+</body>
+</html>
